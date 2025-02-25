@@ -15,7 +15,7 @@
         <div class="alert alert-success">{{ session('success') }}</div>
         @endif
         <table class="table table-bordered">
-            <thead>
+                <thead>
                 <tr>
                     <th>ID</th>
                     <th>Tên</th>
@@ -30,9 +30,9 @@
                 <tr>
                     <td>{{ $product['id'] }}</td>
                     <td>{{ $product['name'] }}</td>
-                    <td>{{ $product['description'] }}</td>
-                    <td>{{ number_format($product['price'], 2) }} $</td>
-                    <td>{{ $product['quantity'] }}</td>
+                    <td>{{ $product['description'] ?? 'Không có mô tả' }}</td>
+                    <td>{{ number_format($product['price'] ?? 0, 2) }} $</td>
+                    <td>{{ $product['quantity'] ?? 0}}</td>
                     <td>
                         <a href="{{ route('products.edit', $product['id']) }}" class="btn btn-warning btn-sm">Sửa</a>
                         <form action="{{ route('products.destroy', $product['id']) }}" method="POST" style="display:inline;">
