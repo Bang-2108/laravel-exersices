@@ -12,3 +12,5 @@ Route::resource('products', ProductController::class);
 Route::get('products', [ProductController::class, 'index']) -> name('products.index');
 
 Route::get('layoutCut', [PageController::class, 'getIndex']) -> name(('trang-chu'));
+
+Route::get('slide', [PageController::class, 'getSlide']) -> name('trang-chu');
