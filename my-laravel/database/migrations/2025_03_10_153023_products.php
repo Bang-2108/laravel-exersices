@@ -20,6 +20,7 @@ return new class extends Migration
             $table->float('promotion_price')->nullable();
             $table->string('image', 255)->nullable();
             $table->string('unit', 255);
+            $table->boolean('new')->default(0); 
             $table->timestamps();
         });
     }

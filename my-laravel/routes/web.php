@@ -13,4 +13,10 @@ Route::get('products', [ProductController::class, 'index']) -> name('products.in
 
 Route::get('layoutCut', [PageController::class, 'getIndex']) -> name(('trang-chu'));
 
+// Cake Shop
 Route::get('slide', [PageController::class, 'getSlide']) -> name('trang-chu');
+Route::get('category',[PageController::class,'getLoaiSp']);
+Route::get('/loai_sp/{type}', [PageController::class, 'getLoaiSP']);
+
+Route::get('homepage', [PageController::class,'getIndex']);
+Route::get('/type/{id}', [PageController::class, 'getLoaiSp']);

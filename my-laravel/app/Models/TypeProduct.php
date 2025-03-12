@@ -20,3 +20,4 @@ class TypeProduct extends Model
         return $this->hasMany(Product::class, 'id_type','id');
     }
 }
+
